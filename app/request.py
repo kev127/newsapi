@@ -56,7 +56,8 @@ def process_results(news_list):
         news_object = news(id,name,description,url,category,country,language)
         news_results.append(news_object)
 
-    return movie_results    
+    return movie_results  
+
 
 def get_articles(id):
     '''
