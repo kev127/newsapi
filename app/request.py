@@ -1,6 +1,7 @@
 from app import app
 import urllib.request,json
-from .models import news, Articles
+from .models import news
+
 
 News = news.News
 
@@ -25,8 +26,8 @@ def get_news(category):
 
         news_results = None
 
-        if get_news_response['results']:
-            news_results_list = get_news_response['results']
+        if get_news_response['news']:
+            news_results_list = get_news_response['news']
             news_results = process_results(news_results_list)
 
 
@@ -52,8 +53,8 @@ def process_results(news_list):
         country = news_item.get('country')
         language = news_item.get('language')
 
-            news_object = news(id,name,description,url,category,country,language)
-            news_results.append(news_object)
+        news_object = news(id,name,description,url,category,country,language)
+        news_results.append(news_object)
 
     return movie_results    
 
