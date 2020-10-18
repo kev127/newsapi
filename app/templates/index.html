@@ -9,6 +9,12 @@
         {% endif %}
     </head>
     <body>
-
-    </body>
+        <!-- general news section  -->
+        <h3> General News</h3>
+         <ul>
+            {% for general_news in popular %}
+                <li>{{ general_news.title}}</li>
+            {% endfor %}
+        </ul>
+ </body>
 </html>
