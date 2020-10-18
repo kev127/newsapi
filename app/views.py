@@ -11,6 +11,7 @@ def index():
 
     # Getting general news
     general_news = get_news('general')
-    print(general_news)
+    entertainment_news = get_news('entertainment')
+    technology_news = get_news('technology')
     title = 'Home - Welcome to Prime News'
-    return render_template('index.html', title = title,general = general_news)
+    return render_template('index.html', title = title,general = general_news,entertainment = entertainment_news,technology = technology_news)
