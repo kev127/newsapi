@@ -12,8 +12,22 @@
         <!-- general news section  -->
         <h3> General News</h3>
          <ul>
-            {% for general_news in popular %}
+            {% for general_news in general %}
                 <li>{{ general_news.title}}</li>
+            {% endfor %}
+        </ul>
+        <!-- entertainment news section  -->
+        <h3> entertainment News</h3>
+         <ul>
+            {% for entertainment_news in entertainment %}
+                <li>{{ entertainment_news.title}}</li>
+            {% endfor %}
+        </ul>
+        <!-- technology news section  -->
+        <h3> technology News</h3>
+         <ul>
+            {% for technology_news in technology %}
+                <li>{{ technology_news.title}}</li>
             {% endfor %}
         </ul>
  </body>
