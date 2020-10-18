@@ -1,20 +1,22 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
-    <body>
-        <!-- general news section  -->
-        <h3> General News</h3>
-        <ul>
-            {{ macro.displayNewsList(general)}}
-        </ul>
-        <!-- entertainment news section  -->
-        <h3> entertainment News</h3>
-        <ul>
-            {{ macro.displayNewsList(entertainment)}}
-        </ul>
-        <!-- technology news section  -->
-        <h3> technology News</h3>
-        <ul>
-            {{ macro.displayNewsList(technology)}}
-        </ul>
- </body>
-</html>
+
+<!-- Content block -->
+{% block content %}
+<!-- general news section  -->
+<h3> General News</h3>
+<ul>
+    {{ macro.displayNewsList(general)}}
+</ul>
+<!-- entertainment news section  -->
+<h3> entertainment News</h3>
+<ul>
+    {{ macro.displayNewsList(entertainment)}}
+</ul>
+<!-- technology news section  -->
+<h3> technology News</h3>
+<ul>
+    {{ macro.displayNewsList(technology)}}
+</ul>
+
+{% endblock}
