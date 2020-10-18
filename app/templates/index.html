@@ -1,34 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Welcome to Prime News </title>
-        {% endif %}
-    </head>
+{% import 'macros.html' as macro%}
     <body>
         <!-- general news section  -->
         <h3> General News</h3>
-         <ul>
-            {% for general_news in general %}
-                <li>{{ general_news.title}}</li>
-            {% endfor %}
+        <ul>
+            {{ macro.displayNewsList(general)}}
         </ul>
         <!-- entertainment news section  -->
         <h3> entertainment News</h3>
-         <ul>
-            {% for entertainment_news in entertainment %}
-                <li>{{ entertainment_news.title}}</li>
-            {% endfor %}
+        <ul>
+            {{ macro.displayNewsList(entertainment)}}
         </ul>
         <!-- technology news section  -->
         <h3> technology News</h3>
-         <ul>
-            {% for technology_news in technology %}
-                <li>{{ technology_news.title}}</li>
-            {% endfor %}
+        <ul>
+            {{ macro.displayNewsList(technology)}}
         </ul>
  </body>
 </html>
