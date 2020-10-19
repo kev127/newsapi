@@ -9,7 +9,7 @@ class SourcesTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_news= Sources(1235,'BBC News','https://www.bbc.co.uk/news/technology-54148474','Business','USA', 'English' ) 
+        self.new_sources= Sources(1235,'BBC News','https://www.bbc.co.uk/news/technology-54148474','Business','USA', 'English' ) 
 
     def test_instance(self):
         '''

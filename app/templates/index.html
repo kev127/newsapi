@@ -1,30 +1,24 @@
-{% extends 'base.html'%}
-{% import 'macros.html' as macro%}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
-    <!-- Styles block -->
 
-    {% block styles%}
-        {{ super() }}
-        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-    {% endblock %}
 
-    <!-- Content block -->
-    {% block content %}
 
-    <!-- general news section  -->
-    <h3> General News</h3>
-    <ul>
-        {{ macro.displayNewsList(general)}}
-    </ul>
-    <!-- entertainment news section  -->
-    <h3> entertainment News</h3>
-    <ul>
-        {{ macro.displayNewsList(entertainment)}}
-    </ul>
-    <!-- technology news section  -->
-    <h3> technology News</h3>
-    <ul>
-        {{ macro.displayNewsList(technology)}}
-    </ul>
+{% block content %}
+<!-- Business News  -->
+<h3 class="text text-center text-primary">Business News Sources</h3>
+    {{ macro.displaySourceList(business_sources)}}
 
-    {% endblock}
+<!-- Entertainment News  -->
+<h3 class="text text-center text-primary">Entertainment News</h3>
+    {{ macro.displaySourceList(entertainment_sources)}}
+
+<!-- Technology News  -->
+<h3 class="text text-center text-primary">Technology News</h3>
+    {{ macro.displaySourceList(technology_sources)}}
+
+<!-- Sport News  -->
+    <h3 class="text text-center text-primary">Sports News</h3>
+    {{ macro.displaySourceList(sports_sources)}}
+
+{% endblock %}
