@@ -5,20 +5,20 @@
 
 
 {% block content %}
-<!-- Business News  -->
-<h3 class="text text-center text-primary">Business News Sources</h3>
-    {{ macro.displaySourceList(business_sources)}}
-
-<!-- Entertainment News  -->
-<h3 class="text text-center text-primary">Entertainment News</h3>
-    {{ macro.displaySourceList(entertainment_sources)}}
-
 <!-- Technology News  -->
-<h3 class="text text-center text-primary">Technology News</h3>
+<h3 class>Technology News</h3>
     {{ macro.displaySourceList(technology_sources)}}
 
+<!-- Entertainment News  -->
+<h3 class=>Entertainment News</h3>
+{{ macro.displaySourceList(entertainment_sources)}}
+
+<!-- Business News  -->
+<h3 class=>Business News</h3>
+    {{ macro.displaySourceList(business_sources)}}
+
 <!-- Sport News  -->
-    <h3 class="text text-center text-primary">Sports News</h3>
+    <h3 class=>Sports News</h3>
     {{ macro.displaySourceList(sports_sources)}}
 
 {% endblock %}

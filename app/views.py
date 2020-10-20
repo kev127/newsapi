@@ -17,7 +17,7 @@ def index():
     title = 'Home - Welcome to Prime News'
     return render_template('index.html',title=title,business_sources=business_sources,sports_sources=sports_sources,technology_sources=technology_sources,entertainment_sources=entertainment_sources)
 
-@app.route('/news/<int:id>')
+@app.route('/sources/<id>')
 def articles(id):
 
     '''
