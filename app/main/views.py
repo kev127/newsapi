@@ -1,8 +1,8 @@
 from flask import render_template,Request,redirect,url_for
-from app import app
-from .request import get_sources,get_articles
+from . import main
+from ..request import get_sources,get_articles
 
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -16,7 +16,7 @@ def index():
     title = 'Home - Welcome to Prime News'
     return render_template('index.html',title=title,business_sources=business_sources,sports_sources=sports_sources,technology_sources=technology_sources,entertainment_sources=entertainment_sources)
 
-@app.route('/sources/<id>')
+@main.route('/sources/<id>')
 def articles(id):
 
     '''
